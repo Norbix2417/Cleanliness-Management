@@ -1,5 +1,5 @@
 from Lista import companies
-from FunkcjeProjektu import show_list, add_company, remove_company, update_company, show_clients, add_client, remove_client, update_client, show_workers, add_worker, remove_worker, update_worker
+from FunkcjeProjektu import show_list, add_company, remove_company, update_company, show_clients, add_client, remove_client, update_client, show_workers, add_worker, remove_worker, update_worker, show_company_map, show_worker_map, show_client_map
 
 correct_password = "SprzątaćKażdyMoże123"
 logged_in = False
@@ -31,6 +31,7 @@ if logged_in:
                     print("2. Dodaj firmę do listy")
                     print("3. Usuń firmę z listy")
                     print("4. Aktualizuj nazwę firmy")
+                    print("5. Wyświetl lokalizację firmy")
                     opcja = input("Wybierz opcję: ")
                     if opcja == '0':
                         break
@@ -45,6 +46,8 @@ if logged_in:
                     elif opcja == '4':
                         update_company(companies)
                         show_list(companies)
+                    elif opcja == '5':
+                        show_company_map(companies)
                     else:
                         print("Niewłaściwa opcja. Wybierz z dostępnych powyżej.")
             elif menu_option == '2':
@@ -54,6 +57,7 @@ if logged_in:
                     print("2. Dodaj klienta do firmy")
                     print("3. Usuń klienta z firmy")
                     print("4. Aktualizuj dane klienta")
+                    print("5. Wyświetl lokalizację klienta")
                     opcja = input("Wybierz opcję: ")
                     if opcja == '0':
                         break
@@ -65,6 +69,8 @@ if logged_in:
                         remove_client(companies)
                     elif opcja == '4':
                         update_client(companies)
+                    elif opcja == '5':
+                        show_client_map(companies)
                     else:
                         print("Niewłaściwa opcja. Wybierz z dostępnych powyżej.")
             elif menu_option == '3':
@@ -74,6 +80,7 @@ if logged_in:
                     print("2. Dodaj pracownika do firmy")
                     print("3. Usuń pracownika z firmy")
                     print("4. Aktualizuj dane pracownika")
+                    print("5. Wyświetl lokalizację pracownika")
                     opcja = input("Wybierz opcję: ")
                     if opcja == '0':
                         break
@@ -85,6 +92,8 @@ if logged_in:
                         remove_worker(companies)
                     elif opcja == '4':
                         update_worker(companies)
+                    elif opcja == '5':
+                        show_client_map(companies)
                     else:
                         print("Niewłaściwa opcja. Wybierz z dostępnych powyżej.")
         print("Dziękujemy za skorzystanie z systemu. Do widzenia!")
