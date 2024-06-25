@@ -1,5 +1,5 @@
 from Lista import companies
-from FunkcjeProjektu import show_list, add_company, remove_company, update_company, show_clients, add_client, remove_client, update_client, show_workers, add_worker, remove_worker, update_worker, show_company_map, show_worker_map, show_client_map
+from FunkcjeProjektu import show_list, add_company, remove_company, update_company, show_clients, add_client, remove_client, update_client, show_workers, add_worker, remove_worker, update_worker, show_company_map, show_client_map, show_worker_map
 
 correct_password = "SprzątaćKażdyMoże123"
 logged_in = False
@@ -93,7 +93,7 @@ if logged_in:
                     elif opcja == '4':
                         update_worker(companies)
                     elif opcja == '5':
-                        show_client_map(companies)
+                        show_worker_map(companies)
                     else:
                         print("Niewłaściwa opcja. Wybierz z dostępnych powyżej.")
-        print("Dziękujemy za skorzystanie z systemu. Do widzenia!")
+        print("Dziękujemy za skorzystanie z systemu. Do widzenia!\n")

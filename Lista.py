@@ -1,3 +1,4 @@
+# Lista firm, klientów, pracowników oraz ich lokalizacji
 companies = [
     {"name": "CleanPol", "location": (52.2399, 20.9987),
      "clients": [{"name": "Andrzej Cysty", "location": (52.2457, 20.9907)},
